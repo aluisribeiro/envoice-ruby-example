@@ -2,12 +2,12 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
 
-  test "should validate product" do
+  test "should validate the product" do
     product = Product.new(price: 20)
     assert product.valid?
   end
 
-  test "should validate product without price" do
+  test "should validate the product without price" do
     product  = Product.new
     refute product.valid?
   end
