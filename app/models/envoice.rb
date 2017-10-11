@@ -3,11 +3,7 @@ class Envoice < ApplicationRecord
   has_many :items
 
   def total
-    tot = 0
-    self.items.each do |item|
-      tot += item.total
-    end
-    return tot
+    self.items.map(&:total).inject(:+)
   end
 
 end

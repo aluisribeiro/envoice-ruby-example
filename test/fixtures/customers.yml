@@ -1,9 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  cpf: MyString
-
-two:
-  name: MyString
-  cpf: MyString
+anderson:
+  name: Anderson Luis Ribeiro
+  cpf: 111.111.111-11
