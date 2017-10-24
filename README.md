@@ -1,24 +1,12 @@
-# README
+# Sistema Emissão de Nota Fiscal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esse sistema é utilizado pela turma do 4 módulo de Análise e Desenvolvimento de Sistemas do segundo semestre de 2017.
 
-Things you may want to cover:
 
-* Ruby version
+## Instruções:
 
-* System dependencies
+### Rodando os testes:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+rails test tests/models/customer_test.rb
+```
