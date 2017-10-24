@@ -1,7 +1,11 @@
 require 'test_helper'
+require 'minitest/autorun'
 
 class CustomerTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+  test "should calculate the customer total" do
+      customer = customers(:anderson)
+      assert_equal 110, customer.total
+  end
+
 end
