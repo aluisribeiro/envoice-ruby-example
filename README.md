@@ -1,24 +1,51 @@
-# README
+# Sistema Emissão de Nota Fiscal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esse sistema é utilizado pela turma do 4 módulo de Análise e Desenvolvimento de Sistemas do segundo semestre de 2017.
 
-Things you may want to cover:
 
-* Ruby version
+## Instruções:
 
-* System dependencies
+### Rodando os testes
 
-* Configuration
+Para rodar os testes do model Customer podemos fazer:
 
-* Database creation
+```ruby
+rails test tests/models/customer_test.rb
+```
 
-* Database initialization
+E para rodar os testes de todos os models podemos fazer:
 
-* How to run the test suite
+```ruby
+rails test tests/models
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Migration e alteração
 
-* Deployment instructions
+Para gerar um migration de alteração de campo podemos fazer:
 
-* ...
+```ruby
+rails g migration ChangeItemProductPrice
+```
+
+E no conteúdo da migration que está no diretório db/migrate do projeto, podemos fazer:
+
+```ruby
+class ChangeItemProductPrice < ActiveRecord::Migration[5.1]
+  def change
+    change_column :items, :product_price, :decimal, precision: 15, scale: 2
+  end
+end
+```
+
+Para que a alteração seja aplicada no banco de dados, devemos fazer:
+
+```ruby
+rails db:migrate
+```
+
+E para as migratrions refletirem na base de testes, fazer:
+
+```ruby
+rails db:migrate RAILS_ENV=test
+```
+
